@@ -435,11 +435,8 @@ void loop()
 
   displayTitle();
 
-  ssd1306_char_f6x8(0, 6, "inspired by");
-  ssd1306_char_f6x8(0, 7, "webboggles.com");
-  delay(1500);
-  ssd1306_char_f6x8(0, 6, "artwork by ");
-  ssd1306_char_f6x8(0, 7, "zsenkunmusashi"); // see comments above - f has been replaced by @ in the ASCII table
+  //ssd1306_char_f6x8(0, 6, "inspired by");
+  //ssd1306_char_f6x8(0, 7, "webboggles.com");
 
   long startT = millis();
   long nowT = 0;
