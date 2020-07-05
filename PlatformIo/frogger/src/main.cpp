@@ -33,6 +33,7 @@
 #include <avr/pgmspace.h>
 #include <avr/sleep.h>
 #include <avr/interrupt.h> // needed for the additional interrupt
+#include <avr/power.h>
 
 // Uncomment this #define to make the logs smaller (/thinner)
 //#define SMALLLOGS
@@ -399,6 +400,7 @@ void displayTitle(void)
 // Arduino stuff - setup
 void setup()
 {
+  clock_prescale_set(clock_div_1); // 16Mhz
   DDRB = 0b00000010;   // set PB1 as output (for the speaker)
   PCMSK = 0b00000001;  // pin change mask: listen to portb bit 1
   GIMSK |= 0b00100000; // enable PCINT interrupt
